@@ -44,6 +44,7 @@
           dusk="nova-media-uploading-list-item-media-remove-button"
         >
           <icon type="delete" view-box="0 0 20 20" width="20" height="20" />
+          🗑️
         </button>
       </div>
     </div>

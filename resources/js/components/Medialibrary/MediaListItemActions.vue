@@ -2,11 +2,13 @@
   <div class="flex items-center justify-between px-2 py-1">
     <div class="flex items-center">
       <button v-if="canView" type="button" class="flex hover:opacity-50 focus:outline-none" @click="media.view()">
-        <Icon type="eye" width="18" height="18" />
+        <icon type="eye" width="18" height="18" />
+        👁️
       </button>
 
       <button v-if="canEdit" type="button" class="ml-2 flex hover:opacity-50 focus:outline-none" @click="media.edit()">
         <Icon type="pencil-alt" width="18" height="18" />
+        ✏️
       </button>
 
       <button
@@ -16,12 +18,14 @@
         @click="media.openDeleteModal()"
       >
         <Icon type="trash" width="18" height="18" />
+        🗑️
       </button>
     </div>
 
     <Dropdown placement="bottom-start" class="btn-block place-self-end">
       <DropdownTrigger :show-arrow="false" class="h-6 w-6 hover:opacity-50">
         <Icon :solid="true" type="dots-horizontal" view-box="0 0 24 24" width="18" height="18" />
+        🍔
       </DropdownTrigger>
 
       <template #menu>
@@ -34,6 +38,7 @@
               class="flex py-1 hover:bg-gray-100"
             >
               <Icon type="clipboard-copy" width="20" height="20" />
+              📋
               <span class="ml-2">{{ __('Copy Url') }}</span>
             </DropdownMenuItem>
 
@@ -45,6 +50,7 @@
               @click="doCopy($event, copyAs.as)"
             >
               <Icon :type="copyAs.icon" width="20" height="20" />
+              📄
               <span class="ml-2">{{ __(`Copy as ${copyAs.as}`) }}</span>
             </DropdownMenuItem>
 
@@ -65,6 +71,8 @@
               @click="media.regenerate()"
             >
               <Icon type="refresh" />
+              🔁
+
               <span class="ml-2">{{ __('Regenerate') }}</span>
             </DropdownMenuItem>
           </div>
@@ -76,6 +84,7 @@
 
 <script>
 import { context } from './Context'
+import { Icon } from 'laravel-nova-ui'
 
 export default {
   props: {

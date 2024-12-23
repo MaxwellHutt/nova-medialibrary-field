@@ -13,6 +13,7 @@
             <div class="flex h-full items-center justify-center">
               <button type="button" class="hover:text-primary flex text-white focus:outline-none" @click="doCopy(url)">
                 <icon type="link" view-box="0 0 20 20" width="20" height="20" />
+                🔗
               </button>
             </div>
           </div>

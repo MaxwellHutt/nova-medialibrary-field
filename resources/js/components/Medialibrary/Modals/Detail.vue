@@ -28,10 +28,12 @@
 
           <OutlineButton v-if="canDelete" omponent="button" type="button" class="mr-3" @click="$emit('delete')">
             <Icon type="trash" width="24" height="24" />
+            🗑️
           </OutlineButton>
 
           <DefaultButton v-if="canEdit" omponent="button" type="button" class="mr-3" @click="$emit('edit')">
             <Icon type="pencil-alt" width="24" height="24" />
+            ✏️
           </DefaultButton>
         </div>
       </ModalFooter>

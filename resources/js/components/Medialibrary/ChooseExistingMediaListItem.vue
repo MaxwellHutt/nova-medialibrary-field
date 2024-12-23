@@ -27,6 +27,7 @@
         @click="$emit(chosen ? 'unchoose' : 'choose')"
       >
         <icon v-if="chosen" width="40" height="40" type="check-circle" class="text-white" />
+        ✔️
       </button>
     </div>
   </div>

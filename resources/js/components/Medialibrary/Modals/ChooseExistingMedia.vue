@@ -6,10 +6,10 @@
       </ModalHeader>
 
       <ModalContent>
-        <IndexSearchInput
-            class="mb-2"
-            @update:keyword="applyFilter"
-        />
+<!--        <IndexSearchInput-->
+<!--            class="mb-2"-->
+<!--            @update:keyword="applyFilter"-->
+<!--        />-->
 
         <LoadingView :loading="loading">
           <slot>
@@ -45,7 +45,7 @@
 <script>
 import PaginationButton from '../PaginationButton'
 import ChooseExistingMediaList from '../ChooseExistingMediaList'
-import IndexSearchInput from '../../../../../vendor/laravel/nova/resources/js/components/Inputs/IndexSearchInput.vue'
+// import IndexSearchInput from '../../../../../vendor/laravel/nova/resources/js/components/Inputs/IndexSearchInput.vue'
 import ModalContent from '../../../../../vendor/laravel/nova/resources/js/components/Modals/ModalContent.vue'
 
 export default {
@@ -54,7 +54,7 @@ export default {
   components: {
     PaginationButton,
     ChooseExistingMediaList,
-    IndexSearchInput,
+    // IndexSearchInput,
     ModalContent,
   },
 
