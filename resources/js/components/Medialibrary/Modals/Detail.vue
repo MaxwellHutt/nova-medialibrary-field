@@ -24,15 +24,17 @@
 
       <ModalFooter>
         <div class="ml-auto flex items-center">
-          <CancelButton component="button" type="button" class="ml-auto mr-3" @click="$emit('close')" />
+          <Button variant="outline" component="button" type="button" class="ml-auto mr-3" @click="$emit('close')">
+            {{ __('Cancel') }}
+          </Button>
 
-          <OutlineButton v-if="canDelete" omponent="button" type="button" class="mr-3" @click="$emit('delete')">
-            <Icon type="trash" width="24" height="24" />
-          </OutlineButton>
+          <Button
+            icon="trash"
+            variant="danger" v-if="canDelete" component="button" type="button" class="mr-3" @click="$emit('delete')">
+          </Button>
 
-          <DefaultButton v-if="canEdit" omponent="button" type="button" class="mr-3" @click="$emit('edit')">
-            <Icon type="pencil-alt" width="24" height="24" />
-          </DefaultButton>
+          <Button icon="pencil-alt" v-if="canEdit" component="button" type="button" class="mr-3" @click="$emit('edit')">
+          </Button>
         </div>
       </ModalFooter>
     </div>
@@ -40,7 +42,13 @@
 </template>
 
 <script>
+import { Icon, Button } from 'laravel-nova-ui';
+
 export default {
+  components: {
+    Icon,
+    Button,
+  },
   emits: ['edit', 'delete', 'close'],
 
   props: {

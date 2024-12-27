@@ -36,6 +36,7 @@ class FieldServiceProvider extends ServiceProvider
         Nova::serving(function (): void {
             Nova::script('nova-medialibrary-field', __DIR__ . '/../dist/js/field.js');
             Nova::style('nova-medialibrary-field', __DIR__ . '/../dist/css/field.css');
+//            Nova::mix('nova-medialibrary-field', __DIR__ . '/../dist/mix-manifest.json');
 
             Media::$model = config('media-library.media_model');
 

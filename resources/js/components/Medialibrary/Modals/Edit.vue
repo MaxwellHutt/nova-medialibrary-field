@@ -33,7 +33,9 @@
 
         <ModalFooter>
           <div class="ml-auto flex items-center">
-            <CancelButton component="button" type="button" class="ml-auto mr-3" @click="$emit('close')" />
+            <Button variant="outline" component="button" type="button" class="ml-auto mr-3" @click="$emit('close')">
+              {{ __('Cancel') }}
+            </Button>
 
             <loading-button type="submit" ref="confirmButton" :disabled="updating" :loading="updating">
               {{ __('Update Media') }}

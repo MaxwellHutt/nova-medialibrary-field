@@ -43,7 +43,7 @@
           @click="media.remove()"
           dusk="nova-media-uploading-list-item-media-remove-button"
         >
-          <icon type="delete" view-box="0 0 20 20" width="20" height="20" />
+          <Icon name="delete" view-box="0 0 20 20" width="20" height="20" />
         </button>
       </div>
     </div>
@@ -52,8 +52,12 @@
 
 <script>
 import { tooltip } from './Utils'
+import { Icon } from 'laravel-nova-ui'
 
 export default {
+  components: {
+    Icon,
+  },
   props: {
     media: {
       type: Object,

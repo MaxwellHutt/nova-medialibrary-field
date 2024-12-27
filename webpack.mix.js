@@ -1,6 +1,9 @@
 let mix = require('laravel-mix')
 let path = require('path')
-require('./mix')
+let NovaExtension = require('laravel-nova-devtool')
+// require('./mix')
+
+mix.extend('nova', new NovaExtension())
 
 mix
   .setPublicPath('dist')
@@ -9,9 +12,11 @@ mix
   .webpackConfig(require('./webpack.config'))
   .sass('resources/sass/field.scss', 'css')
   .nova('dmitrybubyakin/nova-medialibrary-field')
-  .version()
+  // .version()
+  .alias({
+    // '@': path.join(__dirname, 'resources/js/'),
+    '@': 'vendor/laravel/nova/resources/js',
+    'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
+  })
 // .sourceMaps()
 
-mix.alias({
-  'laravel-nova': path.join(__dirname, 'vendor/laravel/nova/resources/js/mixins/packages.js'),
-})
