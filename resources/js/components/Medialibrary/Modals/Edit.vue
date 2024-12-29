@@ -37,9 +37,9 @@
               {{ __('Cancel') }}
             </Button>
 
-            <loading-button type="submit" ref="confirmButton" :disabled="updating" :loading="updating">
+            <Button variant="action" ref="confirmButton" :disabled="updating" :loading="updating">
               {{ __('Update Media') }}
-            </loading-button>
+            </Button>
           </div>
         </ModalFooter>
       </div>
@@ -49,6 +49,7 @@
 
 <script>
 import { PreventsModalAbandonment } from 'laravel-nova'
+import { Button } from 'laravel-nova-ui'
 
 export default {
   emits: ['confirm', 'close', 'submit'],
